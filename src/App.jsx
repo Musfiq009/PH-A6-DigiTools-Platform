@@ -2,22 +2,25 @@ import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import Navbar from "./Components/Nav/Navbar";
 import Steps from "./Components/Steps/Steps";
+import Subscriptions from "./Components/Subscriptions/Subscriptions";
 import Summary from "./Components/Summary/Summary";
 import Tools from "./Components/Tools/Tools";
 
 function App() {
   return (
-  <>
-  <Navbar></Navbar>
+    <>
+      <Navbar></Navbar>
 
-  <Banner></Banner>
+      <Banner></Banner>
 
-  <Summary></Summary>
+      <Summary></Summary>
 
-  <Tools></Tools>
+      <Tools></Tools>
 
-  <Steps></Steps>
-  </>
+      <Steps></Steps>
+
+      <Subscriptions></Subscriptions>
+    </>
   );
 }
 
