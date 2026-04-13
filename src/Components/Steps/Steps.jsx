@@ -12,6 +12,11 @@ const Steps = () => {
         </div>
         <div className="grid grid-cols-3 gap-8">
           <div className="w-full flex flex-col justify-center items-center shadow-lg rounded-xl space-y-4 py-20 px-6 bg-white">
+            <div className="relative">
+              <div className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-10 h-10 rounded-full absolute -top-15 left-35 flex justify-center items-center">
+                <span className="text-white font-bold">01</span>
+              </div>
+            </div>
             <div className="flex justify-center w-fit p-3 rounded-full bg-neutral-content">
               <img src="/src/assets/user.png" alt="User" />
             </div>
@@ -24,6 +29,11 @@ const Steps = () => {
             </p>
           </div>
           <div className="w-full flex flex-col justify-center items-center shadow-lg rounded-xl space-y-4 py-20 px-6 bg-white">
+            <div className="relative">
+              <div className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-10 h-10 rounded-full absolute -top-15 left-35 flex justify-center items-center">
+                <span className="text-white font-bold">02</span>
+              </div>
+            </div>
             <div className="flex justify-center w-fit p-3 rounded-full bg-neutral-content">
               <img src="/src/assets/package.png" alt="Package" />
             </div>
@@ -35,6 +45,11 @@ const Steps = () => {
             </p>
           </div>
           <div className="w-full flex flex-col justify-center items-center shadow-lg rounded-xl space-y-4 py-20 px-6 bg-white">
+            <div className="relative">
+              <div className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-10 h-10 rounded-full absolute -top-15 left-35 flex justify-center items-center">
+                <span className="text-white font-bold">03</span>
+              </div>
+            </div>
             <div className="flex justify-center w-fit p-3 rounded-full bg-neutral-content">
               <img src="/src/assets/rocket.png" alt="Rocket" />
             </div>
