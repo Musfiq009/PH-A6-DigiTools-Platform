@@ -8,6 +8,14 @@ import Subscriptions from "./Components/Subscriptions/Subscriptions";
 import Summary from "./Components/Summary/Summary";
 import Tools from "./Components/Tools/Tools";
 
+const loadData = async () => {
+  const res = await fetch("/data.json");
+  const data = await res.json();
+  return data;
+};
+
+const dataPromise = loadData();
+
 function App() {
   return (
     <>
@@ -17,7 +25,7 @@ function App() {
 
       <Summary></Summary>
 
-      <Tools></Tools>
+      <Tools dataPromise={dataPromise}></Tools>
 
       <Steps></Steps>
 
