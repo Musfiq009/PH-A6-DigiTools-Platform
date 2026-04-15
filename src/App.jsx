@@ -1,6 +1,7 @@
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import CTA from "./Components/CTA/CTA";
+import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Nav/Navbar";
 import Steps from "./Components/Steps/Steps";
 import Subscriptions from "./Components/Subscriptions/Subscriptions";
@@ -23,6 +24,8 @@ function App() {
       <Subscriptions></Subscriptions>
 
       <CTA></CTA>
+
+      <Footer></Footer>
     </>
   );
 }
