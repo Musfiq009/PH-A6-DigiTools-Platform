@@ -1,17 +1,24 @@
+import { toast } from "react-toastify";
 import CardFeature from "./CardFeature";
 
-const ToolsCard = ({ data }) => {
-  console.log(data);
+const ToolsCard = ({ data, selectedCard, setSelectedCart }) => {
+  const checkCart = () =>
+    selectedCard.find((card) => card.id === data.id) ? true : false;
+  // console.log(data);
   return (
     <div>
       <div className="card w-96 h-full bg-base-100 shadow-lg rounded-xl">
         <div className="card-body space-y-4 bg-[#F9FAFC]">
           <div>
-            <div className={`badge badge-soft ${data.tagType === "best seller"
-              ? "badge-warning"
-              : data.tagType === "popular"
-                ? "badge-primary"
-                : "badge-success"} absolute top-3 right-2`}>
+            <div
+              className={`badge badge-soft ${
+                data.tagType === "best seller"
+                  ? "badge-warning"
+                  : data.tagType === "popular"
+                    ? "badge-primary"
+                    : "badge-success"
+              } absolute top-3 right-2`}
+            >
               {data.tag}
             </div>
           </div>
@@ -34,8 +41,15 @@ const ToolsCard = ({ data }) => {
             ))}
           </ul>
           <div>
-            <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] btn-block text-white rounded-full">
-              Buy Now
+            <button
+              onClick={() => {
+                setSelectedCart([...selectedCard, data]);
+                toast.success(`${data.name} is added to cart.`, {theme: "colored"});
+              }}
+              disabled={checkCart()}
+              className={`btn btn-block ${checkCart() ? "bg-green-500" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] "} text-white rounded-full`}
+            >
+              {checkCart() ? "Added to cart" : "Buy Now"}
             </button>
           </div>
         </div>

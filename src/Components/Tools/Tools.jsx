@@ -1,11 +1,13 @@
-import { use } from "react";
 import ToolsCard from "./ToolsCard";
+import Cart from "./Cart";
+import { use } from "react";
 
-const Tools = ({ dataPromise }) => {
+const Tools = ({ dataPromise, selectedCard, setSelectedCart, cartTabActive, setCartTabActive}) => {
   const cardDatas = use(dataPromise);
-  console.log(cardDatas);
+  console.log(selectedCard);
+
   return (
-    <div className="max-w-7xl mx-auto py-28 space-y-10">
+    <div id="tools-section" className="max-w-7xl mx-auto py-28 space-y-10">
       <div className="text-center space-y-6">
         <h1 className="text-5xl font-extrabold text-[#101727]">
           Premium Digital Tools
@@ -21,23 +23,43 @@ const Tools = ({ dataPromise }) => {
           >
             <a
               role="tab"
-              className="tab tab-active rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold"
+              className={`tab ${!cartTabActive ? "tab-active bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full font-bold`}
+              onClick={() => {
+                setCartTabActive(false);
+              }}
             >
               Products
             </a>
-            <a role="tab" className="tab rounded-full font-bold">
-              Cart (0)
+            <a
+              role="tab"
+              className={`tab ${cartTabActive ? "tab-active bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full font-bold`}
+              onClick={() => {
+                setCartTabActive(true);
+              }}
+            >
+              Cart ({selectedCard.length})
             </a>
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-10">
-        {
-          cardDatas.map((data)=>{
-            return <ToolsCard key={data.id} data={data}></ToolsCard>
-          })
-        }
+
+      {!cartTabActive ? (
+        <div className="grid grid-cols-3 gap-10">
+          {cardDatas.map((data) => (
+            <ToolsCard
+              key={data.id}
+              data={data}
+              selectedCard={selectedCard}
+              setSelectedCart={setSelectedCart}
+            />
+          ))}
         </div>
+      ) : (
+        <Cart
+          selectedCard={selectedCard}
+          setSelectedCart={setSelectedCart}
+        ></Cart>
+      )}
     </div>
   );
 };
