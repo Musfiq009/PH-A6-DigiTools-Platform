@@ -1,14 +1,14 @@
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto py-16">
-      <div className="flex gap-16 justify-center items-center">
+      <div className="flex flex-col lg:flex-row gap-16 justify-center items-center">
         <div className="space-y-8">
           <div className="space-y-4">
             <div className="badge badge-soft badge-primary px-4 py-3 rounded-full">
               <img src="/src/assets/Bullet.png" alt="bullet point" />
               New: AI-Powered Tools Available
             </div>
-            <h1 className="text-7xl font-extrabold text-[#101727] leading-24">
+            <h1 className="text-5xl sm:text-7xl font-extrabold text-[#101727] leading-20 sm:leading-24">
               Supercharge Your <br />
               Digital Workflow
             </h1>

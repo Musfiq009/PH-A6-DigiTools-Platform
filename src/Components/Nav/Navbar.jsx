@@ -47,6 +47,9 @@ const Navbar = ({selectedCard, onCartClick}) => {
                 <li>
                   <a>FAQ</a>
                 </li>
+                <li className="block md:hidden">
+                  <a>Login</a>
+                </li>
               </ul>
             </div>
             <h1 className="text-3xl font-extrabold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent pb-2.5">
@@ -77,7 +80,7 @@ const Navbar = ({selectedCard, onCartClick}) => {
               <FiShoppingCart />
               {selectedCard.length>0 ? (<div className="badge badge-error badge-xs absolute top-1 left-6 font-bold">{selectedCard.length}</div>) : null}
             </div>
-            <a className="p-2 cursor-pointer rounded-md font-semibold hover:bg-neutral-content">
+            <a className="hidden md:block p-2 cursor-pointer rounded-md font-semibold hover:bg-neutral-content">
               Login
             </a>
             <a className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-amber-50">

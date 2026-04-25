@@ -13,10 +13,12 @@ const Subscriptions = () => {
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8">
-        <StarterSubscription></StarterSubscription>
-        <ProSubscription></ProSubscription>
-        <EnterpriseSubscription></EnterpriseSubscription>
+      <div className="flex justify-center items-center">
+        <div className="grid xl:grid-cols-3 gap-8">
+          <StarterSubscription></StarterSubscription>
+          <ProSubscription></ProSubscription>
+          <EnterpriseSubscription></EnterpriseSubscription>
+        </div>
       </div>
     </div>
   );

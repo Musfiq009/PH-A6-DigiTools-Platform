@@ -2,7 +2,13 @@ import ToolsCard from "./ToolsCard";
 import Cart from "./Cart";
 import { use } from "react";
 
-const Tools = ({ dataPromise, selectedCard, setSelectedCart, cartTabActive, setCartTabActive}) => {
+const Tools = ({
+  dataPromise,
+  selectedCard,
+  setSelectedCart,
+  cartTabActive,
+  setCartTabActive,
+}) => {
   const cardDatas = use(dataPromise);
   console.log(selectedCard);
 
@@ -44,15 +50,17 @@ const Tools = ({ dataPromise, selectedCard, setSelectedCart, cartTabActive, setC
       </div>
 
       {!cartTabActive ? (
-        <div className="grid grid-cols-3 gap-10">
-          {cardDatas.map((data) => (
-            <ToolsCard
-              key={data.id}
-              data={data}
-              selectedCard={selectedCard}
-              setSelectedCart={setSelectedCart}
-            />
-          ))}
+        <div className="flex justify-center items-center">
+          <div className="grid xl:grid-cols-3 gap-10">
+            {cardDatas.map((data) => (
+              <ToolsCard
+                key={data.id}
+                data={data}
+                selectedCard={selectedCard}
+                setSelectedCart={setSelectedCart}
+              />
+            ))}
+          </div>
         </div>
       ) : (
         <Cart
