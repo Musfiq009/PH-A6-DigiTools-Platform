@@ -1,6 +1,6 @@
 # DigiTools Platform
 
-A modern digital tools marketplace where users can browse, add tools to their cart, and manage purchases — all within a smooth, interactive single-page experience.
+A modern digital tools marketplace where users can browse, add tools to their cart, and manage purchases all within a smooth, interactive single-page experience.
 
 ## 🛠️ Technologies Used
 
@@ -8,6 +8,9 @@ A modern digital tools marketplace where users can browse, add tools to their ca
 - **Vite** — Fast build tool and development server
 - **JavaScript (ES6+)** — Core application logic
 - **CSS / Tailwind CSS** — Styling and responsive layout
+- **DaisyUI** — Tailwind CSS component library for pre-built UI elements
+- **React-Toastify** — NPM package for displaying toast notifications
+- **JSON** — Static data format used to store and serve product information
 
 ## ✨ Features
 
