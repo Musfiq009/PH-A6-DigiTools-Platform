@@ -1,3 +1,6 @@
+import userImg from "../../assets/user.png"
+import packageImg from "../../assets/package.png"
+import rocketImg from "../../assets/rocket.png"
 const Steps = () => {
   return (
     <div className="bg-[#F9FAFC]">
@@ -18,7 +21,7 @@ const Steps = () => {
               </div>
             </div>
             <div className="flex justify-center w-fit p-3 rounded-full bg-neutral-content">
-              <img src="/src/assets/user.png" alt="User" />
+              <img src={userImg} alt="User" />
             </div>
             <h3 className="text-2xl font-bold text-[#101727]">
               Create Account
@@ -35,7 +38,7 @@ const Steps = () => {
               </div>
             </div>
             <div className="flex justify-center w-fit p-3 rounded-full bg-neutral-content">
-              <img src="/src/assets/package.png" alt="Package" />
+              <img src={packageImg} alt="Package" />
             </div>
             <h3 className="text-2xl font-bold text-[#101727]">
               Choose Products
@@ -51,7 +54,7 @@ const Steps = () => {
               </div>
             </div>
             <div className="flex justify-center w-fit p-3 rounded-full bg-neutral-content">
-              <img src="/src/assets/rocket.png" alt="Rocket" />
+              <img src={rocketImg} alt="Rocket" />
             </div>
             <h3 className="text-2xl font-bold text-[#101727]">
               Start Creating

@@ -1,3 +1,6 @@
+import bulletImg from "../../assets/Bullet.png"
+import playIcon from "../../assets/Play.png"
+import bannerImg from "../../assets/banner.png"
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto py-16">
@@ -5,7 +8,7 @@ const Banner = () => {
         <div className="space-y-8">
           <div className="space-y-4">
             <div className="badge badge-soft badge-primary px-4 py-3 rounded-full">
-              <img src="/src/assets/Bullet.png" alt="bullet point" />
+              <img src={bulletImg} alt="bullet point" />
               New: AI-Powered Tools Available
             </div>
             <h1 className="text-5xl sm:text-7xl font-extrabold text-[#101727] leading-20 sm:leading-24">
@@ -23,12 +26,12 @@ const Banner = () => {
               Explore Products
             </button>
             <button className="btn btn-outline btn-primary rounded-full font-bold">
-              <img src="/src/assets/Play.png" alt="play icon" /> Watch Demo
+              <img src={playIcon} alt="play icon" />Watch Now
             </button>
           </div>
         </div>
         <div>
-            <img src="/src/assets/banner.png" alt="Banner" />
+            <img src={bannerImg} alt="Banner" />
         </div>
       </div>
     </div>
