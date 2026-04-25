@@ -75,7 +75,7 @@ const Navbar = ({selectedCard, onCartClick}) => {
               </li>
             </ul>
           </div>
-          <div className="navbar-end gap-4">
+          <div className="navbar-end gap-1 sm:gap-4">
             <div onClick={()=>onCartClick()} className="p-3 cursor-pointer rounded-full hover:bg-neutral-content relative">
               <FiShoppingCart />
               {selectedCard.length>0 ? (<div className="badge badge-error badge-xs absolute top-1 left-6 font-bold">{selectedCard.length}</div>) : null}
